@@ -9,7 +9,7 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>Not Your Mothers!</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -19,11 +19,19 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: black;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
             width: 640px;
             height: 480px;
+        }
+        .navbar-brand{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            margin:0 auto;
         }
         .hanging-close {
             position: absolute;
@@ -40,7 +48,7 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #A9A9A9;
             cursor: pointer;
         }
         .scale-media {
@@ -105,9 +113,9 @@ main_page_content = '''
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+        <div class="container-">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand text-aling" href="# text-center">Not Your Mothers Movie Trailers</a>
           </div>
         </div>
       </div>
@@ -125,6 +133,8 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <h3>Noteable Actors<h3>
+    <h6>{noteable_actors}<h6>
 </div>
 '''
 
@@ -145,7 +155,10 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            noteable_actors=movie.noteable_actors
+
+
         )
     return content
 
