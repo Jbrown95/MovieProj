@@ -1,7 +1,8 @@
 """This file is what fresh_tomatoes uses for its movie list."""
 import media
 import fresh_tomatoes
-
+#I followed along with the course, so the first 2 movies should be very close
+#to what was done there.
 #defining instances of class "Movie" to be added to list "Movies"
 ToyStory = media.Movie("Toy Story", "A Story about toys that live",
                        "https://www.youtube.com/watch?v=KYz2wyBy3kc",

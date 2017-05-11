@@ -2,7 +2,7 @@ import webbrowser
 import os
 import re
 
-
+#Found line 29-34 on stack overflow.
 # Styles and scripting for the page
 main_page_head = '''
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-">
           <div class="navbar-header">
-            <a class="navbar-brand text-aling" href="# text-center">Not Your Mothers Movie Trailers</a>
+            <a class="navbar-brand" href="#">Not Your Mothers Movie Trailers</a>
           </div>
         </div>
       </div>

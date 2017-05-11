@@ -1,4 +1,6 @@
 import webbrowser
+#I followed along with the course, so it should look very similar if not word
+#for word in some parts.
 class Movie():
     """THIS IS DOCUMENTATION """
     VALID_RATINGS = ["G","PG","PG-13","R"]
