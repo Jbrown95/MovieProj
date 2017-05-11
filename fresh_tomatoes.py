@@ -2,7 +2,8 @@ import webbrowser
 import os
 import re
 
-#Found line 29-34 on stack overflow.
+#Found line 29-34 on stack overflow. it was used to center the navbar text
+#added line 137,138,160 for the noteable actors class variable.
 # Styles and scripting for the page
 main_page_head = '''
 <!DOCTYPE html>
